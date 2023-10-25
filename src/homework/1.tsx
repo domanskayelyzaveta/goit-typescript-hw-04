@@ -15,7 +15,7 @@ interface IOption {
 
 export function Observer({ children, onContentEndVisible }: IObserverProps) {
   // Вкажіть правильний тип для useRef зверніть увагу, в який DOM елемент ми його передаємо
-  const endContentRef = useRef<HTMLDivElement>(null); //<HTMLElement | null>
+  const endContentRef = useRef<HTMLDivElement>(null); 
 
   useEffect(() => {
     // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
