@@ -2,16 +2,16 @@ import React, { useReducer } from "react";
 
 interface IState {
   isRequestInProgress: boolean,
-  requestStep: string,
+  requestStep: 'start' | 'pending'| 'finished' | 'idle' ,
 }
 
 interface IAction {
-type: string,
+type: 'START_REQUEST' | 'PENDING_REQUEST' | 'FINISH_REQUEST' | 'RESET_REQUEST',
 }
 
 const initialState: IState = {
   isRequestInProgress: false,
-  requestStep: 'idle',
+  requestStep: "idle",
 };
 
 function requestReducer(state: IState, action: IAction): IState {
